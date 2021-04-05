@@ -1,0 +1,7 @@
+apiVersion: core.kube-pokeapi-arena.io/v1beta1
+kind: Pokeball
+metadata:
+  name: pokeball-sample
+spec:
+  # Add fields here
+  foo: bar

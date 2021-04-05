@@ -1,0 +1,24 @@
+# permissions for end users to edit pokeballs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: pokeball-editor-role
+rules:
+- apiGroups:
+  - core.kube-pokeapi-arena.io
+  resources:
+  - pokeballs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - core.kube-pokeapi-arena.io
+  resources:
+  - pokeballs/status
+  verbs:
+  - get

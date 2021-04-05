@@ -1,0 +1,10 @@
+domain: kube-pokeapi-arena.io
+repo: github.com/julienstroheker/kube-pokeapi-arena
+resources:
+- group: core
+  kind: Instance
+  version: v1beta1
+- group: core
+  kind: Pokeball
+  version: v1beta1
+version: "2"

@@ -1,0 +1,20 @@
+# permissions for end users to view pokeballs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: pokeball-viewer-role
+rules:
+- apiGroups:
+  - core.kube-pokeapi-arena.io
+  resources:
+  - pokeballs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - core.kube-pokeapi-arena.io
+  resources:
+  - pokeballs/status
+  verbs:
+  - get
